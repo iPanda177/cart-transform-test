@@ -1,0 +1,27 @@
+query Input {
+  cart {
+    lines {
+      id
+      quantity
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          title
+          test_case_1: metafield(
+            namespace: "custom",
+            key: "test_case_1"
+          ) {
+            value
+          }
+          test_case_2: metafield(
+            namespace: "custom",
+            key: "test_case_2"
+          ) {
+            value
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+name = "cart-transformer"
+type = "cart_transform"
+title = "cart transform"
+api_version = "2023-07"
+
+[build]
+command = ""
+path = "dist/function.wasm"
