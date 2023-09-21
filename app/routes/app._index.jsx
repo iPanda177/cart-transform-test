@@ -37,7 +37,8 @@ export const loader = async ({ request }) => {
 
   const shopifyFunctionsResponse = await admin.graphql(shopifyFunctionsQuery);
   const shopifyFunctionsResponseJson = await shopifyFunctionsResponse.json();
-  const functionId = shopifyFunctionsResponseJson.data.shopifyFunctions.nodes.find((node) => node.app.title === 'cart-transform').id;
+  // const functionId = shopifyFunctionsResponseJson.data.shopifyFunctions.nodes.find((node) => node.app.title === 'cart-transform').id;
+  const functionId = '69d3320b-daa2-484d-a733-95bcfff0c582';
 
   if (!functionId) {
     return null;
